@@ -1,3 +1,4 @@
+/*
 var sectionHeight = function() {
   var total    = $(window).height(),
       $section = $('section').css('height','auto');
@@ -11,6 +12,7 @@ var sectionHeight = function() {
 }
 
 $(window).resize(sectionHeight);
+*/
 
 $(document).ready(function(){
   $("section h1, section h2").each(function(){
@@ -27,9 +29,9 @@ $(document).ready(function(){
     event.preventDefault();    
   });
   
-  sectionHeight();
+  //sectionHeight();
   
-  $('img').load(sectionHeight);
+  //$('img').load(sectionHeight);
 });
 
 fixScale = function(doc) {

@@ -135,7 +135,7 @@ dt {
 header {
   padding: 25px 20px 25px 20px;
   margin: 0;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -175,8 +175,8 @@ header p {
   left: 0;
   right: 0;
   height: 50px;
-  position: fixed;
-  top: 125px;
+  position: relative;
+  top: -30px;
   background: url(../images/trees.png);
   -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
@@ -199,14 +199,14 @@ header p {
 .wrapper {
   width: 720px;
   margin: 0 auto;
-  margin-top: 190px;
+  margin-top: -10px;
   position: relative;
 }
 
 .column {
   width: 260px;
   padding: 30px 30px 50px 30px;
-  margin: 20px 19px;
+  margin: 10px 19px 20px;
   position: relative;
   float: left;
   background: #FBFBFB;
@@ -378,9 +378,9 @@ input.placeholder-text, textarea.placeholder-text {
 
 /* Footer ================================================================== */
 footer {
-  width: 660px;
-  margin: 10px 20px;
-  padding: 10px;
+  width: 100%;
+  margin: 0;
+  padding-top: 20px;
   position: relative;
   float: left;
   text-align: center;
@@ -395,7 +395,7 @@ footer {
   div.wrapper {
     width: 720px;
     margin: 0 auto;
-    margin-top: 190px;
+    margin-top: -10px;
   }
 
   header, section {
@@ -444,13 +444,13 @@ footer {
   }
 
   #banner {
-    top: 90px;
+    top: -50px;
   }
 
   div.wrapper {
     width: 480px;
     margin: auto;
-    margin-top: 140px;
+    margin-top: -40px;
   }
 
   .column {
@@ -464,7 +464,7 @@ footer {
   }
 
   footer {
-    width: 400px;
+    width: 480px;
   }
 
   header ul, header p.view {

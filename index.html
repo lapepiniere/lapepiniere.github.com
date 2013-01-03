@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
 
-    <script src="javascripts/modernizr.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
@@ -52,29 +51,77 @@
         </div>
       </section>
 
-      <section id="form">
-        <h3>&Agrave; Bient&ocirc;t / See you soon!</h3>
-        <ul id="errors" class="">  
-            <li id="info">There were some problems with your form submission:</li>  
-        </ul>
-        <p id="success">Thanks for your message! We will get back to you ASAP!</p>  
+    <section id="form">
+        <meta itemprop="embedUrl" content="https://docs.google.com/spreadsheet/embeddedform?formkey=dGpSNkxmeVlWNjlwdFFtQVNPalVBYWc6MQ">
+
+        <div class="ss-form-container">
+            <h3>&Agrave; Bient&ocirc;t / See you soon!</h3>
+            <div class="ss-form-heading"><h1 class="ss-form-title"></h1>
+                <hr class="ss-email-break" style="display:none;">
+            </div>
+            <div class="ss-form">
+            <form action="https://docs.google.com/spreadsheet/formResponse?formkey=dGpSNkxmeVlWNjlwdFFtQVNPalVBYWc6MQ&amp;ifq" method="POST" id="ss-form">
+
+            <div class="errorbox-good">
+                <div class="ss-item ss-item-required ss-text">
+                    <div class="ss-form-entry">
+                        <label class="ss-q-title" for="entry_0">Nom / Name:</label>
+                        <label class="ss-q-help" for="entry_0"></label>
+                        <input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0" placeholder="Jean Dupont" required="required" autofocus="autofocus" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="errorbox-good">
+                <div class="ss-item ss-item-required ss-text">
+                    <div class="ss-form-entry">
+                        <label class="ss-q-title" for="entry_1">Adresse Email / Email Address:</label>
+                        <label class="ss-q-help" for="entry_1"></label>
+                        <input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1" placeholder="jeandupont@example.com" required="required" />
+                    </div>
+                </div>
+            </div>
         
-        <form method="post" action="http://www.uftou.com/pepiniere/signup.php">  
-            <label for="name">Nom / Name: <span class="required">*</span></label>  
-            <input type="text" id="name" name="name" value="" placeholder="Jean Dupont" required="required" autofocus="autofocus" />
+            <input type="hidden" name="pageNumber" value="0">
+            <input type="hidden" name="backupCache" value="">
 
-            <label for="email">Adresse Email / Email Address: <span class="required">*</span></label>  
-            <input type="email" id="email" name="email" value="" placeholder="jeandupont@example.com" required="required" />
+            <div class="ss-item ss-navigate">
+                <div class="ss-form-entry">
+                    <input type="submit" name="submit" value="Envoyer / Send" id="submit-button" />
+                </div>
+            </div>
+            </form>
+        
+    <script type="text/javascript">
+      
+      (function() {
+var divs = document.getElementById('ss-form').
+getElementsByTagName('div');
+var numDivs = divs.length;
+for (var j = 0; j < numDivs; j++) {
+if (divs[j].className == 'errorbox-bad') {
+divs[j].lastChild.firstChild.lastChild.focus();
+return;
+}
+}
+for (var i = 0; i < numDivs; i++) {
+var div = divs[i];
+if (div.className == 'ss-form-entry' &&
+div.firstChild &&
+div.firstChild.className == 'ss-q-title') {
+div.lastChild.focus();
+return;
+}
+}
+})();
+    </script>
+    </div>
 
-            <span id="loading">spanners!</span>  
-            <input type="submit" value="Envoyer / Send" id="submit-button" />  
-            <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>  
-        </form>
-      </section>
+    </section>        
 
-      <footer>
-        <p><small><a href="http://calvarychapelnice.fr">CCNice 2012</a></small></p>
-      </footer>
+    <footer>
+        <p><small>-<a href="http://calvarychapelnice.fr">&copy; CCNice 2013</a></small>-</p>
+    </footer>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->

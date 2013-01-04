@@ -91,10 +91,9 @@ a {
   text-decoration: none;
 }
 
-a small {
-  font-size: 11px;
-  color: #666;
-  margin-top: -0.6em;
+small a {
+  font-size: 12px;
+  color: #888;
   display: block;
 }
 
@@ -169,6 +168,7 @@ header p {
   margin-top: 10px;
 }
 
+
 /* Banner ================================================================== */
 #banner {
   z-index: 100;
@@ -205,7 +205,7 @@ header p {
 
 .column {
   width: 260px;
-  padding: 30px 30px 50px 30px;
+  padding: 30px 30px 30px 30px;
   margin: 10px 19px 20px;
   position: relative;
   float: left;
@@ -243,20 +243,22 @@ header p {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.09), inset 0px 0px 2px 2px rgba(255, 255, 255, 0.5), inset 0 0 5px 5px rgba(255, 255, 255, 0.4);
 }
 
-form {
-}
-
 #form h3 {
     text-align: center;
 }
 
-form input {
+form input, textarea {
     width: 610px;
     font-size: 15px;
     border: 1px solid #CEE1E8;
     margin-top: 5px;
     margin-bottom: 10px;
     padding: 10px 4px;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
 }
 
 form label {
@@ -277,13 +279,12 @@ form .required {
 
 form #submit-button {
     width: 300px;
-    background-color: #333;
     color: #FFF;
     border: none;
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-left: 160px;
-    background-color: #8FB5C1;
+    background-color: #D0480C;
     -moz-border-radius: 8px;
     border-radius: 3px;
 }
@@ -295,60 +296,6 @@ form #submit-button:hover {
 form #submit-button:active {
     position: relative;
     top: 1px;
-}
-
-#loading {
-    width: 32px;
-    height: 32px;
-    display: block;
-    position: absolute;
-    right: 130px;
-    bottom: 16px;
-    display:none;
-}
-
-#errors {
-    border: solid 1px #E58E8E;
-    padding: 10px;
-    margin: 25px 0px;
-    display: block;
-    width: 437px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius:8px;
-    border-radius: 8px;
-    display: none;
-}
-
-#errors li {
-    padding: 2px;
-    list-style: none;
-}
-#errors li:before {
-    content: ' - ';
-}
-#errors #info {
-    font-weight: bold;
-}
-#errors #info:before {
-    content: '';
-}
-#success {
-    border: solid 1px #83D186;
-    padding: 25px 10px;
-    margin: 25px 0px;
-    display: block;
-    width: 437px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: none;
-}
-#errors.visible, #success.visible {
-    display: block;
-}
-#req-field-desc {
-    font-style: italic;
 }
 
 /* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
@@ -381,6 +328,7 @@ footer {
   width: 100%;
   margin: 0;
   padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
   float: left;
   text-align: center;
@@ -463,6 +411,14 @@ footer {
     margin: 10px 9px;
   }
 
+  form input, textarea{
+      width: 390px;
+  }
+
+  form #submit-button{
+      margin-left: 50px;
+  }
+
   footer {
     width: 480px;
   }
@@ -511,25 +467,5 @@ footer {
     padding: 0.4in;
     font-size: 12pt;
     color: #444;
-  }
-}
-@media print, screen and (max-height: 680px) {
-  footer {
-    text-align: center;
-    margin: 20px auto;
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: auto;
-  }
-}
-@media print, screen and (max-height: 480px) {
-  footer {
-    text-align: center;
-    margin: 20px auto;
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: auto;
   }
 }

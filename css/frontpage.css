@@ -1,0 +1,44 @@
+  body {
+  }
+
+  .container-narrow {
+      margin: 0 auto;
+      max-width: 700px;
+  }
+
+  hr {
+      margin: 10px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #ddd;
+  }
+
+  #fp_head {
+      margin-top: 10px;
+      text-align: center;
+  }
+
+  #fp_head h1{
+      font-size: 72px;
+      line-height: 1;
+  }
+
+  .columns {
+      padding: 0 10px;
+  }
+
+  .columns h3 {
+      text-align: center;
+  }
+
+  .btn {
+      margin: 20px 0;
+  }
+
+  .footer {
+      margin-top: 20px;
+      text-align: center;
+  }
+
+  .ss-form-container h3 {
+      text-align: center;
+  }
